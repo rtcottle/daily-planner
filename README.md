@@ -24,6 +24,8 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
 README reference: https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide
 
+moment.js guide: https://www.youtube.com/watch?v=nmAHDEO9RW8
+
 ## License
 
 This project is under the [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
