@@ -24,6 +24,8 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
 README reference: https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide
 
+day.js guide: https://day.js.org/en/
+
 ## License
 
 This project is under the [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
