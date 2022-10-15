@@ -16,40 +16,45 @@ console.log(setTime);
 console.log(businessHours);
 
 var hours = [
-  document.getElementById("9"),
-  document.getElementById("10"),
-  document.getElementById("11"),
-  document.getElementById("12"),
-  document.getElementById("1"),
-  document.getElementById("2"),
-  document.getElementById("3"),
-  document.getElementById("4"),
-  document.getElementById("5"),
+  document.getElementById("hour-9"),
+  document.getElementById("hour-10"),
+  document.getElementById("hour-11"),
+  document.getElementById("hour-12"),
+  document.getElementById("hour-1"),
+  document.getElementById("hour-2"),
+  document.getElementById("hour-3"),
+  document.getElementById("hour-4"),
+  document.getElementById("hour-5"),
 ];
 
 var inputEl = "";
-var userInput = document.querySelectorAll(".description");
-var retrieveUserInput = localStorage.getItem("item");
+var $userInput = localStorage.setItem(
+  "userEvent",
+  JSON.stringify($(".description").value)
+);
+var retrieveUserInput = localStorage.getItem("userEvent");
 var $saveEl = $(".saveBtn");
 
+//retrieves user inputs
+function renderInputs() {
+  for (var j = 0; j < hours; j++) {
+    $(".discription").append($userInput);
+  }
+}
+renderInputs();
+
+// sets the user input as an item in the local storage
 function userItems(event) {
-  event.currentTarget.localStorage.setItem("item", userInput.value);
+  for (var i = 0; i < hours[i]; i++) {
+    event.$(".description").localStorage.setItem("item", $userInput);
+  }
 }
 
-for (var i = 0; i < userInput.value; i++) {
-  localStorage.setItem("item", currentTarget.userInput.value);
-  userInput[i].addEventListener("click", userInput, false);
-}
-
-$(".saveBtn").addEventListener("click", function () {
+//adds function to each save button
+$(".saveBtn").click($userInput, function () {
+  console.log($userInput);
   userItems();
 });
-
-// document.querySelectorAll(".saveBtn").forEach((saveEl) => {
-//   saveEl.currentTarget.addEventListener("click", (event) => {
-//     event.userItems();
-//   });
-// });
 
 //set the time for 9-5 business hours
 // var nine = {

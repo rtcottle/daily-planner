@@ -28,6 +28,10 @@ day.js guide: https://day.js.org/en/
 
 Error help: https://stackoverflow.com/questions/32027935/addeventlistener-is-not-a-function-why-does-this-error-occur
 
+Jquery local storage tutorial: https://www.youtube.com/watch?v=d4b7iuc3mzI&t=29s
+
+Click events in jQuery: https://api.jquery.com/click/
+
 ## License
 
 This project is under the [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
