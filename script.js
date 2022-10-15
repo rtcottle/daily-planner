@@ -30,7 +30,7 @@ var hours = [
 var inputEl = "";
 var userInput = document.querySelectorAll(".description");
 var retrieveUserInput = localStorage.getItem("item");
-var saveEl = document.querySelectorAll(".saveBtn");
+var $saveEl = $(".saveBtn");
 
 function userItems(event) {
   event.currentTarget.localStorage.setItem("item", userInput.value);
@@ -41,13 +41,15 @@ for (var i = 0; i < userInput.value; i++) {
   userInput[i].addEventListener("click", userInput, false);
 }
 
-document.querySelectorAll(".saveBtn").forEach((saveEl) => {
-  saveEl.currentTarget.addEventListener("click", (event) => {
-    event.userItems();
-  });
+$(".saveBtn").addEventListener("click", function () {
+  userItems();
 });
 
-saveEl.addEventListener("click", console.log("hi"));
+// document.querySelectorAll(".saveBtn").forEach((saveEl) => {
+//   saveEl.currentTarget.addEventListener("click", (event) => {
+//     event.userItems();
+//   });
+// });
 
 //set the time for 9-5 business hours
 // var nine = {
