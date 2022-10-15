@@ -26,6 +26,8 @@ README reference: https://coding-boot-camp.github.io/full-stack/github/professio
 
 day.js guide: https://day.js.org/en/
 
+Error help: https://stackoverflow.com/questions/32027935/addeventlistener-is-not-a-function-why-does-this-error-occur
+
 ## License
 
 This project is under the [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)

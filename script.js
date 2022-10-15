@@ -27,16 +27,25 @@ var hours = [
   document.getElementById("5"),
 ];
 
-var test = document.querySelector(".description");
+var inputEl = "";
+var test = document.querySelectorAll(".description");
 var retrieve = localStorage.getItem("test");
-var save = document.querySelector("saveBtn");
+var save = document.querySelectorAll(".saveBtn");
 
-if (save) {
-  save.addEventListener("click", function () {
-    localStorage.setItem("input", test.textContent);
-    console.log(test.textContent);
-  });
+function userInput() {
+  test.value = inputEl;
 }
+
+for (var i = 0; i < test.value; i++) {
+  test[i].addEventListener("click", userInput, false);
+}
+
+// save.addEventListener("click", function () {
+//   console.log("hi");
+//   //   localStorage.setItem("input", test.value);
+//   //   console.log(test);
+//   userInput();
+// });
 
 //set the time for 9-5 business hours
 // var nine = {
