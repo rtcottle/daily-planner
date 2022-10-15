@@ -28,24 +28,24 @@ var hours = [
 ];
 
 var inputEl = "";
-var test = document.querySelectorAll(".description");
-var retrieve = localStorage.getItem("test");
-var save = document.querySelectorAll(".saveBtn");
+var userInput = document.querySelectorAll(".description");
+var retrieveUserInput = localStorage.getItem("item");
+var saveEl = document.querySelectorAll(".saveBtn");
 
-function userInput() {
-  test.value = inputEl;
+function userItems(event) {
+  event.currentTarget.localStorage.setItem("item", userInput.value);
 }
 
-for (var i = 0; i < test.value; i++) {
-  test[i].addEventListener("click", userInput, false);
+for (var i = 0; i < userInput.value; i++) {
+  localStorage.setItem("item", currentTarget.userInput.value);
+  userInput[i].addEventListener("click", userInput, false);
 }
 
-// save.addEventListener("click", function () {
-//   console.log("hi");
-//   //   localStorage.setItem("input", test.value);
-//   //   console.log(test);
-//   userInput();
-// });
+document.querySelectorAll(".saveBtn").forEach((saveEl) => {
+  saveEl.currentTarget.addEventListener("click", (event) => {
+    event.userItems();
+  });
+});
 
 //set the time for 9-5 business hours
 // var nine = {
