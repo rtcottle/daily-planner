@@ -47,6 +47,8 @@ document.querySelectorAll(".saveBtn").forEach((saveEl) => {
   });
 });
 
+saveEl.addEventListener("click", console.log("hi"));
+
 //set the time for 9-5 business hours
 // var nine = {
 //   hours[0]:
