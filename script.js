@@ -62,7 +62,7 @@ var $saveEl = $(".saveBtn");
 $(".saveBtn").click(function () {
   console.log($(this).siblings(".description").val());
   localStorage.setItem(
-    //TODO get the selector here!!,
+    $(this).siblings(".hour").text(),
     JSON.stringify($(this).siblings(".description").val())
   );
   // userItems();
