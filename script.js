@@ -42,7 +42,7 @@ var entries = [
 ];
 
 var events = {
-  hour9: hours[0].value,
+  hour9: $("#9").val(),
   hour10: hours[1].value,
   hour11: hours[2].value,
   hour12: hours[3].value,
@@ -79,7 +79,7 @@ $(".saveBtn").click(function () {
 function renderInputs() {
   var lastEvent = JSON.parse(localStorage.getItem("Event"));
   if (lastEvent !== null) {
-    events.hour9 = $("#9").val(events.hour9);
+    events.hour9 = getItem("9AM");
     events.hour10 = $(".description").val();
     events.hour11 = $(".description").val();
     events.hour12 = $(".description").val();
