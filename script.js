@@ -27,62 +27,44 @@ var hours = [
   document.getElementById("hour-5"),
 ];
 
-var inputEl = "";
-var $userInput = localStorage.setItem(
-  "userEvent",
-  JSON.stringify($(".description").value)
-);
-var retrieveUserInput = localStorage.getItem("userEvent");
+var events = {
+  hour9: hours[0].value,
+  // hour10: hours[1].value,
+  // hour11: hours[2].value,
+  // hour12: hours[3].value,
+  // hour1: hours[4].value,
+  // hour2: hours[5].value,
+  // hour3: hours[6].value,
+  // hour4: hours[7].value,
+  // hour5: hours[8].value,
+};
+
+console.log(events);
+
+// var retrieveUserInput = localStorage.getItem("userEvent");
 var $saveEl = $(".saveBtn");
+
+//adds function to each save button, sets local storage
+$(".saveBtn").click(function () {
+  localStorage.setItem("Event", JSON.stringify(events));
+  // userItems();
+  renderInputs();
+  console.log(events);
+});
 
 //retrieves user inputs
 function renderInputs() {
-  for (var j = 0; j < hours; j++) {
-    $(".discription").append($userInput);
+  var lastEvent = JSON.parse(localStorage.getItem("Event"));
+  if (lastEvent !== null) {
+    events = $(".description").val();
+    // $(".description").value = events;
+    console.log(events);
   }
 }
-renderInputs();
 
 // sets the user input as an item in the local storage
-function userItems(event) {
-  for (var i = 0; i < hours[i]; i++) {
-    event.$(".description").localStorage.setItem("item", $userInput);
-  }
-}
-
-//adds function to each save button
-$(".saveBtn").click($userInput, function () {
-  console.log($userInput);
-  userItems();
-});
-
-//set the time for 9-5 business hours
-// var nine = {
-//   hours[0]:
-//     dayjs().set("hour", 9).set("minute", 00).set("second", 00),
-// };
-// console.log(nine);
-// var ten = dayjs().set("hour", 10).set("minute", 00).set("second", 00);
-// console.log(ten);
-// var ten = dayjs().set("hour", 11).set("minute", 00).set("second", 00);
-// console.log(ten);
-// var eleven = dayjs().set("hour", 12).set("minute", 00).set("second", 00);
-// console.log(eleven);
-// var twelve = dayjs().set("hour", 13).set("minute", 00).set("second", 00);
-// console.log(twelve);
-// var one = dayjs().set("hour", 14).set("minute", 00).set("second", 00);
-// console.log(one);
-// var two = dayjs().set("hour", 15).set("minute", 00).set("second", 00);
-// console.log(two);
-// var three = dayjs().set("hour", 16).set("minute", 00).set("second", 00);
-// console.log(three);
-// var four = dayjs().set("hour", 17).set("minute", 00).set("second", 00);
-// console.log(four);
-// var five = dayjs().set("hour", 18).set("minute", 00).set("second", 00);
-// console.log(five);
-
-// var entry = document.querySelectorAll(".description").textContent;
-// var saveBtn = document.querySelectorAll(".saveBtn");
-// saveBtn.on("click", function () {
-//   localStorage.setItem("input", entry);
-// });
+// function userItems(event) {
+//   for (var i = 0; i < hours[this]; i++) {
+//     event.localStorage.setItem($userInput);
+//   }
+// }
