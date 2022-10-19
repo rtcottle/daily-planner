@@ -12,7 +12,7 @@ N/A
 
 ## Usage
 
-<!-- TODO: add a link here -->
+Link for the site:
 
 ![alt text](./screenshot.png)
 
@@ -32,20 +32,10 @@ Click events in jQuery: https://api.jquery.com/click/
 
 This project is under the [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
-## Badges
-
-![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
-
-Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
-
 ## Features
 
-If your project has a lot of features, list them here.
-
-## How to Contribute
-
-If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
+This project updates with the time of day and allows you to plan accordingly.
 
 ## Tests
 
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
+Test this functionality by putting in your events and hitting the save icon on the right. Refresh your browser and see if it persists.

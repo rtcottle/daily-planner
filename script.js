@@ -89,33 +89,19 @@ function renderInputs() {
 }
 
 function changeColors() {
-  ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"].forEach(
-    (e) => {
-      var removeLastTwo = e.slice(0, -2);
-      var timeEl = $("#" + removeLastTwo);
-      console.log(timeEl);
+  [9, 10, 11, 12, 13, 14, 15, 16, 17].forEach((e) => {
+    var colorEl = $(".past").children("#" + e);
+
+    if (e > now) {
+      $(".past").setAttribute("class", "future");
     }
-  );
+
+    if (e === now) {
+      $(".past").setAttribute("class", "present");
+    }
+
+    console.log(colorEl);
+  });
 }
-
-// (events.hour9 = localStorage.getItem("9AM")),
-//   (events.hour10 = JSON.parse(localStorage.getItem("10AM"))),
-//   (events.hour11 = JSON.parse(localStorage.getItem("11AM"))),
-//   (events.hour12 = JSON.parse(localStorage.getItem("12PM"))),
-//   (events.hour1 = JSON.parse(localStorage.getItem("1PM"))),
-//   (events.hour2 = JSON.parse(localStorage.getItem("2PM"))),
-//   (events.hour3 = JSON.parse(localStorage.getItem("3PM"))),
-//   (events.hour4 = JSON.parse(localStorage.getItem("4PM"))),
-//   (events.hour5 = JSON.parse(localStorage.getItem("5PM"))),
-// $(".description").value = events;
-// console.log(events);
-// }
-
-// sets the user input as an item in the local storage
-// function userItems(event) {
-//   for (var i = 0; i < hours[this]; i++) {
-//     event.localStorage.setItem($userInput);
-//   }
-// }
 
 // HINT: take current time, same array (AM/PM) use conditional inside a function.
