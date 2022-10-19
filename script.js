@@ -43,20 +43,20 @@ var entries = [
 
 var events = {
   hour9: $("#9").val(),
-  hour10: hours[1].value,
-  hour11: hours[2].value,
-  hour12: hours[3].value,
-  hour1: hours[4].value,
-  hour2: hours[5].value,
-  hour3: hours[6].value,
-  hour4: hours[7].value,
-  hour5: hours[8].value,
+  hour10: $("#10").val(),
+  hour11: $("#11").val(),
+  hour12: $("#12").val(),
+  hour1: $("#1").val(),
+  hour2: $("#2").val(),
+  hour3: $("#3").val(),
+  hour4: $("#4").val(),
+  hour5: $("#5").val(),
 };
-
-console.log(events);
 
 // var retrieveUserInput = localStorage.getItem("userEvent");
 var $saveEl = $(".saveBtn");
+
+renderInputs();
 
 //adds function to each save button, sets local storage
 $(".saveBtn").click(function () {
@@ -71,26 +71,21 @@ $(".saveBtn").click(function () {
   //upon clicking save, grab value of ID associated with time block, that will be name/key of 1st argument of .setItem
   //grab value of text area, assign that as second argument of .setItem (don't forget JSON.stringify).
   //(line 63) save to storage.
-
-  // renderInputs();
 });
 
-//retrieves user inputs - - s
+//retrieves user inputs
 function renderInputs() {
-  var lastEvent = JSON.parse(localStorage.getItem("Event"));
-  if (lastEvent !== null) {
-    events.hour9 = getItem("9AM");
-    events.hour10 = $(".description").val();
-    events.hour11 = $(".description").val();
-    events.hour12 = $(".description").val();
-    events.hour1 = $(".description").val();
-    events.hour2 = $(".description").val();
-    events.hour3 = $(".description").val();
-    events.hour4 = $(".description").val();
-    events.hour5 = $(".description").val();
+  (events.hour9 = localStorage.getItem("9AM")),
+    (events.hour10 = JSON.parse(localStorage.getItem("10AM"))),
+    (events.hour11 = JSON.parse(localStorage.getItem("11AM"))),
+    (events.hour12 = JSON.parse(localStorage.getItem("12PM"))),
+    (events.hour1 = JSON.parse(localStorage.getItem("1PM"))),
+    (events.hour2 = JSON.parse(localStorage.getItem("2PM"))),
+    (events.hour3 = JSON.parse(localStorage.getItem("3PM"))),
+    (events.hour4 = JSON.parse(localStorage.getItem("4PM"))),
+    (events.hour5 = JSON.parse(localStorage.getItem("5PM"))),
     // $(".description").value = events;
     console.log(events);
-  }
 }
 
 // sets the user input as an item in the local storage
