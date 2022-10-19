@@ -12,7 +12,7 @@ N/A
 
 ## Usage
 
-Link for the site:
+Link for the site: https://rtcottle.github.io/daily-planner/
 
 ![alt text](./screenshot.png)
 
